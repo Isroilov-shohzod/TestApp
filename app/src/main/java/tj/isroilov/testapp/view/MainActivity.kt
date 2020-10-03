@@ -60,7 +60,6 @@ class MainActivity : AppCompatActivity(), MainListener {
     private fun startLoadingData(){
         mainViewModel.getAllData(101, 0).observe(this, {
             Log.d("RESULT", "coming ${it.size}")
-            // imageLoader.loadImage(it)
             mainAdapter.loadData(it)
         })
 
